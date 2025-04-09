@@ -86,3 +86,27 @@ body {
     display: none;
   }
   
+  #lang-select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    margin-bottom: 10px;
+    appearance: none;
+  }
+  
+  #lang-select:hover {
+    border-color: #3498db;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+  }
+  
+  #lang-select:focus {
+    border-color: #2980b9;
+    box-shadow: 0 2px 8px rgba
+  

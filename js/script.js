@@ -62,10 +62,14 @@ function rotateImage(degrees) {
   drawToCanvas();
 }
 
+const languageSelect = document.getElementById('lang-select');
+
 function extractText() {
-  Tesseract.recognize(image.src, 'eng', {
-    logger: m => console.log(m)
+  const lang = languageSelect.value || 'eng';
+  // ...
+  Tesseract.recognize(image.src, lang, {
+    logger: m => { /* same as before */ }
   }).then(({ data: { text } }) => {
-    document.getElementById('output').textContent = text.trim();
+    // ...
   });
 }

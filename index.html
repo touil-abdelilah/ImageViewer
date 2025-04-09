@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bank Transfer Viewer + OCR</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://unpkg.com/tesseract.js@2.1.5/dist/tesseract.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <h1>🔎 Bank Transfer Viewer + OCR</h1>
+  <div class="viewer-card">
+    <div id="drop-area" onclick="document.getElementById('fileInput').click()">
+      <p>📂 Drag & Drop or Click to Upload Image</p>
+      <input type="file" id="fileInput" accept="image/*" />
+      <canvas id="canvas" style="display: none;"></canvas>
+      <img id="image" />
+    </div>
+
+    <div class="controls">
+      <button onclick="rotateImage(-90)">
+        <i data-lucide="rotate-ccw"></i> Rotate Left
+      </button>
+      <button onclick="rotateImage(90)">
+        <i data-lucide="rotate-cw"></i> Rotate Right
+      </button>
+      <button onclick="extractText()">
+        <i data-lucide="scan-text"></i> Extract Text
+      </button>
+    </div>
+
+    <div id="output"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
